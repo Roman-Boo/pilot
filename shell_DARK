@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#if [ ! -e '/usr/share/gnome-shell/theme/gnome-shell (D).css' ]; then
+#	sudo cp -r './THEME/masOS_Sierra-Dark/gnome-shell/gnome-shell (D).css' '/usr/share/gnome-shell/theme/gnome-shell (D).css'
+#fi
+
+#sudo cp -r '/usr/share/gnome-shell/theme/assets/'  '/usr/share/gnome-shell/theme/_assets/' 
+#sudo cp -r '/usr/share/gnome-shell/extensions/'  '/usr/share/gnome-shell/_extensions/' 
+#sudo cp -r './gnome-shell/theme/assets/' './gnome-shell/theme/extensions/' '/usr/share/gnome-shell/theme/'
+
+if [ -e '/usr/share/gnome-shell/theme/gnome-shell.css' ]; then
+	cd '/usr/share/gnome-shell/theme/'
+	rm -r './gnome-shell.css'  # './ubuntu.css' './pop.css'
+fi
+
+cd '/usr/share/gnome-shell/theme/'
+ cp -r 'gnome-shell (transparent-D).css' './gnome-shell.css'
+# ln -s 'gnome-shell.css' './ubuntu.css'
+# ln -s 'gnome-shell.css' './pop.css'
+
+# sudo chmod -R 777 '/usr/share/gnome-shell/theme/pop.css' '/usr/share/gnome-shell/theme/ubuntu.css' '/usr/share/gnome-shell/theme/gnome-shell.css'
+
+gsettings set org.gnome.desktop.interface gtk-theme 'masOS_Dark'
+gsettings set org.gnome.gedit.preferences.editor scheme  'oblivion'

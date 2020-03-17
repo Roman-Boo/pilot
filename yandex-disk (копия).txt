@@ -1,0 +1,6 @@
+devs://webdav.yandex.ru
+
+
+нажать - alt + fn + F2  
+	и
+ввести - r
